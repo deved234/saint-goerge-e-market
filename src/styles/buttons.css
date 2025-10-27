@@ -1,0 +1,293 @@
+/* ===================================
+   Global Button Styles
+   =================================== */
+
+/* Primary Button - Red Gradient */
+.btn-primary,
+.admin-edit-btn,
+.manage-products-btn,
+.submit-btn,
+.add-first-btn,
+.mode-btn.active,
+.admin-login-btn,
+.add-category-button {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #D04251 0%, #C73544 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(208, 66, 81, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  white-space: nowrap;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-primary::before,
+.admin-edit-btn::before,
+.manage-products-btn::before,
+.submit-btn::before,
+.add-first-btn::before,
+.admin-login-btn::before,
+.add-category-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before,
+.admin-edit-btn:hover::before,
+.manage-products-btn:hover::before,
+.submit-btn:hover::before,
+.add-first-btn:hover::before,
+.admin-login-btn:hover::before,
+.add-category-button:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover,
+.admin-edit-btn:hover,
+.manage-products-btn:hover,
+.submit-btn:hover,
+.add-first-btn:hover,
+.admin-login-btn:hover,
+.add-category-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(208, 66, 81, 0.4);
+  background: linear-gradient(135deg, #B83947 0%, #A82D3A 100%);
+}
+
+.btn-primary:active,
+.admin-edit-btn:active,
+.manage-products-btn:active,
+.submit-btn:active,
+.add-first-btn:active,
+.admin-login-btn:active,
+.add-category-button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 4px 12px rgba(208, 66, 81, 0.3);
+}
+
+/* Secondary Button - Edit/Modify */
+.edit-btn,
+.modify-btn {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #D04251 0%, #C73544 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 12px rgba(208, 66, 81, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.edit-btn::before,
+.modify-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.edit-btn:hover::before,
+.modify-btn:hover::before {
+  left: 100%;
+}
+
+.edit-btn:hover,
+.modify-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(208, 66, 81, 0.4);
+  background: linear-gradient(135deg, #B83947 0%, #A82D3A 100%);
+}
+
+.edit-btn:active,
+.modify-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 3px 10px rgba(208, 66, 81, 0.3);
+}
+
+/* Cancel/Secondary Button */
+.cancel-btn,
+.back-btn {
+  padding: 14px 32px;
+  background: #FFFFFF;
+  color: #D04251;
+  border: 2px solid #D04251;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.cancel-btn:hover,
+.back-btn:hover {
+  background: #D04251;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(208, 66, 81, 0.3);
+}
+
+.cancel-btn:active,
+.back-btn:active {
+  transform: translateY(0);
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 12px rgba(220, 53, 69, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.delete-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.delete-btn:hover::before {
+  left: 100%;
+}
+
+.delete-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+  background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+}
+
+.delete-btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+}
+
+/* Mode Button (inactive) */
+.mode-btn {
+  padding: 12px 28px;
+  background: #FFFFFF;
+  color: #666666;
+  border: 2px solid #E0E0E0;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mode-btn:hover {
+  border-color: #D04251;
+  color: #D04251;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(208, 66, 81, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn-primary,
+  .admin-edit-btn,
+  .manage-products-btn,
+  .submit-btn,
+  .cancel-btn,
+  .back-btn {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  
+  .edit-btn,
+  .modify-btn,
+  .delete-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .admin-edit-btn,
+  .manage-products-btn,
+  .submit-btn,
+  .cancel-btn,
+  .back-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .edit-btn,
+  .modify-btn,
+  .delete-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
